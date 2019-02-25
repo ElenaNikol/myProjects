@@ -1,19 +1,24 @@
 
-function findSum(n) {
-    var sum = 0;
-    while(n){
-        var i = n%10;
-        sum += i;
-        n/=10;
-        console.log(i);
-    }
-    console.log(sum);
+function totallyDiff(n,x) {
+   for (var i=n+1;i<x;i++){
+       var flag = 1;
+       var tmpI = i;
+       while(tmpI){
+           var cifI = tmpI%10;
+           var tmpX = x;
+           while(tmpX){
+               if(tmpX%10 === cifI) {
+                   flag = 0;
+               }
+               tmpX/=10;
+           }
+           tmpI/=10;
+       }
+       if(flag){
+           console.log(i);
+           return 0;
+       }
+   }
 }
-// 101
-//num = 101^2;
-//sum = sum + num sum = sum + 101^2;
-//102
-//num = 102^2;
-//sum = 101^2 + 102^2;
-//
-findSum(3453);
+
+totallyDiff();
