@@ -10,9 +10,9 @@ function totallyDiff(n,x) {
                if(tmpX%10 === cifI) {
                    flag = 0;
                }
-               tmpX/=10;
+               tmpX = Math.floor(tmpX/10);
            }
-           tmpI/=10;
+           tmpI = Math.floor(tmpI/10);
        }
        if(flag){
            console.log(i);
@@ -21,4 +21,4 @@ function totallyDiff(n,x) {
    }
 }
 
-totallyDiff();
+totallyDiff(10,100);
