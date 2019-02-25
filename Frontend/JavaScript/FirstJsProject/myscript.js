@@ -5,6 +5,7 @@ function findSum(n) {
         var i = n%10;
         sum += i;
         n/=10;
+        console.log(i);
     }
     console.log(sum);
 }
